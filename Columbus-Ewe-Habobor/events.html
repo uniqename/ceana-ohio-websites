@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events | Columbus Ewe Harbor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --red: #8B1A1A; --gold: #D4A017; --green: #1B5E20; --navy: #1A2332; --cream: #FDF8F0; --text: #1A2332; --muted: #4A5568; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: var(--text); background: white; }
+        h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; line-height: 1.2; }
+        a { color: var(--gold); text-decoration: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+        .logo { height: 60px; display: flex; align-items: center; }
+        .logo img { height: 100%; width: auto; }
+        nav { display: flex; gap: 2rem; list-style: none; }
+        nav a { color: var(--navy); font-weight: 500; text-decoration: none; }
+        nav a:hover { color: var(--red); }
+        .btn { display: inline-block; padding: 0.7rem 1.5rem; border-radius: 25px; font-weight: 600; background: var(--navy); color: white; }
+        .btn:hover { background: var(--red); }
+        section { padding: 5rem 2rem; }
+        section h2 { font-size: 2.5rem; margin-bottom: 3rem; color: var(--navy); }
+        .events-grid { display: grid; gap: 2.5rem; }
+        .event-card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 5px solid var(--gold); }
+        .event-date { font-size: 2.5rem; font-weight: 700; color: var(--red); line-height: 1; }
+        .event-month { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600; }
+        .event-card h3 { font-size: 1.3rem; color: var(--navy); margin: 1rem 0 0.5rem; }
+        .event-card p { color: var(--muted); line-height: 1.6; }
+        footer { background: var(--navy); color: white; padding: 3rem 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+        .footer-bottom { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; }
+        @media (max-width: 768px) { nav { display: none; } section h2 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <div class="logo"><a href="index.html"><img src="logo.png" alt="Columbus Ewe Harbor"></a></div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="events.html">Events</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="join.html" class="btn">Join Us</a>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2>Upcoming Events</h2>
+        <div class="events-grid">
+            <div class="event-card">
+                <div style="display: flex; gap: 1.5rem;">
+                    <div>
+                        <div class="event-date">30</div>
+                        <div class="event-month">AUG</div>
+                    </div>
+                    <div style="flex: 1;">
+                        <h3>Community Networking Mixer</h3>
+                        <p style="font-size: 0.95rem; margin: 0.5rem 0;">Columbus, OH • 6:00 PM - 9:00 PM</p>
+                        <p>Connect, share, and celebrate our growing community. Network with fellow Ewes and build meaningful relationships.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div style="display: flex; gap: 1.5rem;">
+                    <div>
+                        <div class="event-date">20</div>
+                        <div class="event-month">SEP</div>
+                    </div>
+                    <div style="flex: 1;">
+                        <h3>Cultural Heritage Festival</h3>
+                        <p style="font-size: 0.95rem; margin: 0.5rem 0;">Columbus, OH • 10:00 AM - 5:00 PM</p>
+                        <p>Food, music, dance, and celebration of our roots. Experience the richness of Ewe culture and traditions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div style="display: flex; gap: 1.5rem;">
+                    <div>
+                        <div class="event-date">12</div>
+                        <div class="event-month">OCT</div>
+                    </div>
+                    <div style="flex: 1;">
+                        <h3>Youth Mentorship Program</h3>
+                        <p style="font-size: 0.95rem; margin: 0.5rem 0;">Columbus, OH • 2:00 PM - 5:00 PM</p>
+                        <p>Empowering the next generation through mentorship, guidance, and educational opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-section">
+            <div class="footer-logo"><img src="logo.png" alt="Columbus Ewe Harbor" style="height: 50px; width: auto;"></div>
+            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 0.5rem;">United in Heritage. Stronger Together.</p>
+        </div>
+        <div class="footer-section">
+            <h3 style="color: var(--gold); margin-bottom: 1rem;">Navigation</h3>
+            <a href="index.html" style="color: rgba(255,255,255,0.8); text-decoration: none; display: block; margin-bottom: 0.5rem;">Home</a>
+            <a href="about.html" style="color: rgba(255,255,255,0.8); text-decoration: none; display: block; margin-bottom: 0.5rem;">About</a>
+            <a href="events.html" style="color: rgba(255,255,255,0.8); text-decoration: none; display: block; margin-bottom: 0.5rem;">Events</a>
+            <a href="gallery.html" style="color: rgba(255,255,255,0.8); text-decoration: none; display: block; margin-bottom: 0.5rem;">Gallery</a>
+        </div>
+        <div class="footer-section">
+            <h3 style="color: var(--gold); margin-bottom: 1rem;">Connect</h3>
+            <a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; display: block; margin-bottom: 0.5rem;">Facebook</a>
+            <a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; display: block; margin-bottom: 0.5rem;">Instagram</a>
+            <a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; display: block; margin-bottom: 0.5rem;">Twitter</a>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Columbus Ewe Harbor. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

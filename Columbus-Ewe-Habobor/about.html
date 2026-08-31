@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Columbus Ewe Harbor</title>
+    <meta name="description" content="Learn about Columbus Ewe Harbor community, our heritage, values, and mission.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --red: #8B1A1A;
+            --gold: #D4A017;
+            --green: #1B5E20;
+            --navy: #1A2332;
+            --cream: #FDF8F0;
+            --text: #1A2332;
+            --muted: #4A5568;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: var(--text); background: white; }
+        h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; line-height: 1.2; }
+        a { color: var(--gold); text-decoration: none; }
+        img { max-width: 100%; height: auto; display: block; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        .logo { height: 60px; display: flex; align-items: center; }
+        .logo img { height: 100%; width: auto; }
+        nav { display: flex; gap: 2rem; list-style: none; }
+        nav a { color: var(--navy); font-weight: 500; transition: color 0.3s; text-decoration: none; }
+        nav a:hover { color: var(--red); }
+        .btn { display: inline-block; padding: 0.7rem 1.5rem; border-radius: 25px; font-weight: 600; transition: all 0.3s; background: var(--navy); color: white; }
+        .btn:hover { background: var(--red); }
+
+        section { padding: 5rem 2rem; }
+        section h2 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--navy); }
+        section p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; font-size: 1.05rem; }
+
+        .hero-banner {
+            background: linear-gradient(135deg, rgba(26,35,50,0.6) 0%, rgba(139,26,26,0.6) 100%),
+                        url('ewe join 1.png') center/cover;
+            background-attachment: fixed;
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        .hero-banner h1 { font-size: 3rem; margin-bottom: 1rem; }
+
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .about-grid img { border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+        .values { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem; }
+        .value { background: var(--gold); color: var(--navy); padding: 2rem; border-radius: 10px; text-align: center; }
+        .value h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+
+        footer {
+            background: var(--navy);
+            color: white;
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .footer-section h3 { color: var(--gold); margin-bottom: 1rem; font-size: 1rem; }
+        .footer-section a { color: rgba(255,255,255,0.8); font-size: 0.9rem; display: block; margin-bottom: 0.5rem; transition: color 0.3s; }
+        .footer-section a:hover { color: var(--gold); }
+        .footer-logo { height: 50px; margin-bottom: 1rem; }
+        .footer-logo img { height: 100%; width: auto; }
+        .footer-bottom { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.7); }
+
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .about-grid { grid-template-columns: 1fr; }
+            .values { grid-template-columns: repeat(2, 1fr); }
+            section h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="Columbus Ewe Harbor"></a>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="events.html">Events</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="join.html" class="btn">Join Us</a>
+        </div>
+    </header>
+
+    <section class="hero-banner">
+        <div class="container">
+            <h1>Our Heritage. Our Home.</h1>
+            <p>Columbus Ewe Harbor is more than an association — it's a family</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="about-grid">
+            <div>
+                <h2>Who We Are</h2>
+                <p>Columbus Ewe Harbor is a vibrant community of Ewes from all walks of life, dedicated to preserving our culture, supporting our members, and building a stronger future in Columbus and beyond.</p>
+                <p style="margin-top: 1.5rem;">We bring together individuals and families in the Columbus, Ohio area. We are committed to fostering unity, providing support, and creating opportunities for cultural preservation, leadership, and collective growth.</p>
+            </div>
+            <img src="ewe join 1.png" alt="Our Community">
+        </div>
+    </section>
+
+    <section style="background: var(--navy); color: white; padding: 5rem 2rem;">
+        <div class="container">
+            <h2 style="color: white; text-align: center; margin-bottom: 3rem;">Our Core Values</h2>
+            <div class="values">
+                <div class="value">
+                    <h3>Unity</h3>
+                    <p>Building lasting connections</p>
+                </div>
+                <div class="value">
+                    <h3>Heritage</h3>
+                    <p>Preserving our traditions</p>
+                </div>
+                <div class="value">
+                    <h3>Opportunity</h3>
+                    <p>Creating shared growth</p>
+                </div>
+                <div class="value">
+                    <h3>Compassion</h3>
+                    <p>Supporting our community</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-section">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Columbus Ewe Harbor">
+            </div>
+            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7);">United in Heritage. Stronger Together.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Navigation</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="events.html">Events</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+        <div class="footer-section">
+            <h3>Connect</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <div class="footer-section">
+            <h3>Get in Touch</h3>
+            <a href="mailto:info@columbuseweharbor.org">📧 info@columbuseweharbor.org</a>
+            <a href="tel:+16145550123">📱 (614) 555-0123</a>
+            <p style="font-size: 0.85rem; margin-top: 1rem;">📍 Columbus, Ohio, USA</p>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Columbus Ewe Harbor. All rights reserved.</p>
+            <p style="margin-top: 0.5rem;">A proud local chapter of CEANA | Heritage • Community • Development</p>
+        </div>
+    </footer>
+</body>
+</html>

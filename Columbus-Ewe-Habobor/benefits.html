@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Benefits | Columbus Ewe Harbor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --red: #8B1A1A; --gold: #D4A017; --navy: #1A2332; --text: #1A2332; --muted: #4A5568; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: var(--text); background: white; }
+        h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+        .logo { height: 60px; }
+        .logo img { height: 100%; width: auto; }
+        nav { display: flex; gap: 2rem; }
+        nav a { color: var(--navy); text-decoration: none; font-weight: 500; }
+        nav a:hover { color: var(--red); }
+        .btn { padding: 0.6rem 1.2rem; background: var(--red); color: white; text-decoration: none; display: inline-block; font-weight: 600; border-radius: 5px; }
+        .btn:hover { background: #a01f1f; }
+        .hero { background: linear-gradient(135deg, rgba(139,26,26,0.6) 0%, rgba(26,35,50,0.6) 100%), url('ewe join 1.png') center/cover; color: white; padding: 4rem 2rem; text-align: center; }
+        .hero h1 { font-size: 2.5rem; }
+        section { padding: 5rem 2rem; }
+        h2 { font-size: 2.2rem; margin-bottom: 1rem; }
+        .benefits-6grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .benefit-large { background: #f8f8f8; padding: 2rem; border-radius: 10px; border-left: 5px solid var(--gold); }
+        .benefit-large img { width: 60px; margin-bottom: 1rem; }
+        .benefit-large h3 { font-size: 1.2rem; margin: 1rem 0 0.5rem; }
+        .benefit-large p { color: var(--muted); line-height: 1.6; }
+        .cta-box { background: linear-gradient(135deg, rgba(26,35,50,0.8) 0%, rgba(139,26,26,0.8) 100%), url('ewe join 1.png') center/cover; color: white; padding: 3rem; border-radius: 10px; text-align: center; margin: 3rem 0; }
+        .cta-box h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        .cta-box .btn { background: var(--gold); color: var(--navy); }
+        footer { background: var(--navy); color: white; padding: 3rem 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; }
+        .footer-bottom { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; font-size: 0.9rem; }
+        @media (max-width: 768px) { nav { display: none; } .benefits-6grid { grid-template-columns: 1fr; } .hero h1 { font-size: 1.8rem; } }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <div class="nav">
+            <div class="logo"><a href="index.html"><img src="logo.png" alt="Columbus Ewe Harbor"></a></div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="benefits.html">Benefits</a>
+                <a href="events.html">Events</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="join.html" class="btn">Join Us</a>
+        </div>
+    </header>
+
+    <section class="hero container">
+        <h1>Member Benefits</h1>
+        <p>Home / Benefits</p>
+    </section>
+
+    <section class="container">
+        <h2 style="text-align: center; margin-bottom: 1rem;">More Than a Membership – A Lifetime of Benefits</h2>
+        <p style="text-align: center; color: var(--muted); margin-bottom: 3rem;">When you join Columbus Ewe Harbor, you become part of a community designed to help you succeed personally, professionally, and culturally.</p>
+
+        <div class="benefits-6grid">
+            <div class="benefit-large">
+                <img src="assets/networking.png" alt="Community & Networking">
+                <h3>Community & Networking</h3>
+                <p>Build lasting connections and meaningful relationships with fellow Ewe members in Columbus.</p>
+            </div>
+            <div class="benefit-large">
+                <img src="assets/cultural-preservation.png" alt="Cultural Connection">
+                <h3>Cultural Connection</h3>
+                <p>Stay connected to Ewe culture, heritage, traditions, language, and community celebrations.</p>
+            </div>
+            <div class="benefit-large">
+                <img src="assets/education.png" alt="Education & Youth">
+                <h3>Education & Youth Programs</h3>
+                <p>Access mentorships, scholarships, and youth development programs for a brighter future.</p>
+            </div>
+            <div class="benefit-large">
+                <img src="assets/business.png" alt="Business Support">
+                <h3>Business & Career Support</h3>
+                <p>Access to job opportunities, resources, partnerships, and professional growth opportunities.</p>
+            </div>
+            <div class="benefit-large">
+                <img src="assets/community.png" alt="Exclusive Events">
+                <h3>Exclusive Events</h3>
+                <p>Enjoy member-only features, workshops, and special partnerships throughout the year.</p>
+            </div>
+            <div class="benefit-large">
+                <img src="assets/community.png" alt="Support & Resources">
+                <h3>Support & Resources</h3>
+                <p>Access to resources and support through life's challenges from our collective family.</p>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h3>Ready to Enjoy These Benefits?</h3>
+            <p style="margin-bottom: 1.5rem;">Join today and become part of a thriving community</p>
+            <a href="join.html" class="btn">Join Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <div style="height: 50px; margin-bottom: 1rem;"><img src="logo.png" alt="CEH" style="height: 100%; width: auto;"></div>
+            <p style="font-size: 0.85rem;">United in Heritage, Stronger Together</p>
+        </div>
+        <div>
+            <h3 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 1rem;">Quick Links</h3>
+            <a href="index.html" style="color: rgba(255,255,255,0.8); display: block; text-decoration: none; font-size: 0.9rem;">Home</a>
+            <a href="about.html" style="color: rgba(255,255,255,0.8); display: block; text-decoration: none; font-size: 0.9rem;">About</a>
+            <a href="events.html" style="color: rgba(255,255,255,0.8); display: block; text-decoration: none; font-size: 0.9rem;">Events</a>
+        </div>
+        <div>
+            <h3 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 1rem;">Resources</h3>
+            <a href="#" style="color: rgba(255,255,255,0.8); display: block; text-decoration: none; font-size: 0.9rem;">Membership</a>
+            <a href="#" style="color: rgba(255,255,255,0.8); display: block; text-decoration: none; font-size: 0.9rem;">Business Directory</a>
+        </div>
+        <div>
+            <h3 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 1rem;">Contact</h3>
+            <a href="mailto:info@columbuseweharbor.org" style="color: rgba(255,255,255,0.8); display: block; text-decoration: none; font-size: 0.9rem;">📧 Email</a>
+            <a href="tel:+16145550123" style="color: rgba(255,255,255,0.8); display: block; text-decoration: none; font-size: 0.9rem;">📱 (614) 555-0123</a>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Columbus Ewe Harbor. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -43,15 +43,13 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0;
         }
-        .logo img {
-            width: 70px;
+        .logo svg {
+            width: 220px;
             height: auto;
             display: block;
         }
-        .logo-text h1 { color: var(--navy); font-size: 1.2rem; margin: 0; }
-        .logo-text p { color: var(--red); font-size: 0.9rem; margin: 0; }
         nav { display: flex; gap: 2rem; list-style: none; }
         nav a { color: var(--navy); font-weight: 500; transition: color 0.3s; }
         nav a:hover { color: var(--red); }
@@ -150,11 +148,26 @@
     <header>
         <div class="container nav">
             <div class="logo">
-                <img src="logo.png" alt="Columbus Ewe Harbor Logo">
-                <div class="logo-text">
-                    <h1>Columbus Ewe Harbor</h1>
-                    <p>United in Heritage, Stronger Together</p>
-                </div>
+                <svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" style="width: 200px; height: auto;">
+                    <!-- Circular Icon -->
+                    <g transform="translate(120, 200)">
+                        <circle cx="0" cy="0" r="110" fill="#8B1A1A"/>
+                        <g stroke="#D4A017" stroke-width="8" opacity="0.8">
+                            <line x1="-100" y1="-100" x2="-50" y2="50"/>
+                            <line x1="-90" y1="-110" x2="-40" y2="60"/>
+                            <line x1="-110" y1="-90" x2="-60" y2="40"/>
+                        </g>
+                        <circle cx="0" cy="0" r="75" fill="#D4A017"/>
+                        <circle cx="0" cy="0" r="35" fill="#FDF8F0"/>
+                        <circle cx="0" cy="-85" r="18" fill="#8B1A1A"/>
+                        <circle cx="85" cy="0" r="15" fill="#D4A017"/>
+                        <circle cx="70" cy="70" r="25" fill="#1B5E20"/>
+                    </g>
+                    <!-- Text -->
+                    <text x="280" y="150" font-size="80" font-weight="700" fill="#1A2332" font-family="'Playfair Display', Georgia, serif">Columbus</text>
+                    <text x="280" y="220" font-size="60" font-weight="700" fill="#8B1A1A" font-family="'Playfair Display', Georgia, serif">EWE</text>
+                    <text x="480" y="220" font-size="60" font-weight="700" fill="#D4A017" font-family="'Playfair Display', Georgia, serif">HARBOR</text>
+                </svg>
             </div>
             <nav>
                 <a href="#home">Home</a>

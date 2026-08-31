@@ -1,0 +1,62 @@
+<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="400" fill="white"/>
+
+  <!-- Circular Icon -->
+  <g transform="translate(120, 200)">
+    <!-- Outer circle (red) -->
+    <circle cx="0" cy="0" r="110" fill="#8B1A1A"/>
+
+    <!-- Kente pattern left (diagonal lines) -->
+    <g stroke="#D4A017" stroke-width="8" opacity="0.8">
+      <line x1="-100" y1="-100" x2="-50" y2="50"/>
+      <line x1="-90" y1="-110" x2="-40" y2="60"/>
+      <line x1="-110" y1="-90" x2="-60" y2="40"/>
+    </g>
+
+    <!-- Inner gold circle -->
+    <circle cx="0" cy="0" r="75" fill="#D4A017"/>
+
+    <!-- Central Adinkra symbol (simplified) -->
+    <g fill="#FDF8F0">
+      <circle cx="0" cy="0" r="35"/>
+      <path d="M -15,-15 L 15,-15 L 15,15 L -15,15 Z" fill="#8B1A1A" opacity="0.3"/>
+      <circle cx="-8" cy="-8" r="3" fill="#8B1A1A"/>
+      <circle cx="8" cy="-8" r="3" fill="#8B1A1A"/>
+      <circle cx="-8" cy="8" r="3" fill="#8B1A1A"/>
+      <circle cx="8" cy="8" r="3" fill="#8B1A1A"/>
+    </g>
+
+    <!-- Green accent (bottom right) -->
+    <circle cx="70" cy="70" r="25" fill="#1B5E20"/>
+
+    <!-- Red circle (top) -->
+    <circle cx="0" cy="-85" r="18" fill="#8B1A1A"/>
+
+    <!-- Gold circle (right) -->
+    <circle cx="85" cy="0" r="15" fill="#D4A017"/>
+  </g>
+
+  <!-- Text -->
+  <g font-family="'Playfair Display', Georgia, serif">
+    <!-- Columbus -->
+    <text x="280" y="150" font-size="120" font-weight="700" fill="#1A2332" letter-spacing="-2">Columbus</text>
+
+    <!-- EWE (red) and HARBOR (gold) -->
+    <g font-size="80" font-weight="700">
+      <text x="280" y="240" fill="#8B1A1A">EWE</text>
+      <text x="580" y="240" fill="#D4A017">HARBOR</text>
+    </g>
+
+    <!-- Decorative line and CEANA text -->
+    <g font-family="'Inter', system-ui, sans-serif" font-size="28">
+      <line x1="280" y1="260" x2="950" y2="260" stroke="#D4A017" stroke-width="2"/>
+      <text x="300" y="310" fill="#1A2332" font-size="24" letter-spacing="3">LOCAL CHAPTER OF CEANA</text>
+    </g>
+
+    <!-- Tagline -->
+    <g font-family="'Inter', system-ui, sans-serif" font-size="18" fill="#1A2332" letter-spacing="2">
+      <text x="280" y="350">HERITAGE • COMMUNITY • DEVELOPMENT</text>
+    </g>
+  </g>
+</svg>

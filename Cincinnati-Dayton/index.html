@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ewe Association of Cincinnati-Dayton | Celebrating Ewe Heritage in the Tri-State</title>
+  <meta name="description" content="Ewe Association of Cincinnati-Dayton – Uniting Ewes and friends across Cincinnati and Dayton to preserve culture, build community, and support development in Eweland. Proud CEANA member.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #8B1A1A;
+      --gold: #D4A017;
+      --green: #1B5E20;
+      --navy: #1A2332;
+      --cream: #FDF8F0;
+      --soft-gold: #F5E6C8;
+      --teal: #0D7377;
+      --text: #1A2332;
+      --muted: #4A5568;
+      --white: #FFFFFF;
+      --shadow: 0 4px 20px rgba(26,35,50,0.08);
+      --radius: 14px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+    a { color: var(--teal); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--red); }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 1.5rem; }
+
+    header {
+      background: var(--white);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 0;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--red);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      color: var(--navy);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .nav-links a:hover { color: var(--red); }
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.25s;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .btn-primary:hover {
+      background: #c49115;
+      color: var(--navy);
+    }
+    .btn-secondary {
+      background: transparent;
+      border-color: var(--gold);
+      color: var(--navy);
+    }
+    .btn-secondary:hover {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .btn-red {
+      background: var(--red);
+      color: var(--white);
+    }
+    .btn-red:hover { background: #6e1414; color: var(--white); }
+
+    .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--navy); }
+    @media (max-width: 850px) {
+      .menu-toggle { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1rem;
+        box-shadow: var(--shadow);
+      }
+      .nav-links.open { display: flex; }
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #2a3a4f 45%, var(--green) 100%);
+      color: var(--white);
+      padding: 5.5rem 0 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4A017' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+    .hero .container { position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(212,160,23,0.2);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 0.35rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.03em;
+    }
+    .hero h1 {
+      font-size: clamp(2.1rem, 5vw, 3.2rem);
+      margin-bottom: 1.25rem;
+      max-width: 720px;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      max-width: 580px;
+      opacity: 0.92;
+      margin-bottom: 2rem;
+    }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+    section { padding: 4.5rem 0; }
+    .section-label {
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      margin-bottom: 1rem;
+      color: var(--navy);
+    }
+    .section-intro {
+      color: var(--muted);
+      max-width: 620px;
+      margin-bottom: 2.5rem;
+      font-size: 1.05rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.75rem;
+    }
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(26,35,50,0.12);
+    }
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--soft-gold);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.6rem;
+      color: var(--navy);
+    }
+    .card p { color: var(--muted); font-size: 0.98rem; }
+
+    .welcome { background: var(--soft-gold); }
+    .welcome-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .welcome-grid { grid-template-columns: 1fr; }
+    }
+    .welcome-text h2 { margin-bottom: 1rem; }
+    .welcome-text p { margin-bottom: 1rem; color: var(--muted); }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+    .stat {
+      background: var(--white);
+      padding: 1.4rem;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--red);
+    }
+    .stat-label { font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem; }
+
+    .event-highlight {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
+    }
+    @media (max-width: 700px) {
+      .event-highlight { grid-template-columns: 1fr; }
+    }
+    .event-highlight h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .event-meta { color: var(--gold); font-weight: 600; margin-bottom: 0.75rem; }
+    .event-highlight p { opacity: 0.9; margin-bottom: 0; }
+
+    .cta-banner {
+      background: linear-gradient(135deg, var(--green), #0d3d12);
+      color: var(--white);
+      text-align: center;
+      padding: 4rem 0;
+    }
+    .cta-banner h2 { color: var(--white); margin-bottom: 0.75rem; }
+    .cta-banner p { opacity: 0.9; max-width: 520px; margin: 0 auto 1.75rem; }
+
+    footer {
+      background: var(--navy);
+      color: #c5cdd8;
+      padding: 4rem 0 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 800px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 500px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+    .footer-brand span { color: var(--gold); }
+    footer h4 {
+      color: var(--white);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+    }
+    footer ul { list-style: none; }
+    footer ul li { margin-bottom: 0.5rem; }
+    footer a { color: #c5cdd8; }
+    footer a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+    .ceana-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(212,160,23,0.15);
+      border: 1px solid rgba(212,160,23,0.4);
+      padding: 0.4rem 0.9rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      color: var(--gold);
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">Ewe Assoc. <span>Cincinnati-Dayton</span></a>
+      <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#culture">Culture</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#involve">Get Involved</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#involve" class="btn btn-primary">Join Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">Proud Member of CEANA • 501(c)(3)</div>
+      <h1>Celebrating Ewe Culture.<br>Strengthening Community Across Cincinnati & Dayton.</h1>
+      <p>The Ewe Association of Cincinnati-Dayton unites Ewes and friends in the greater Cincinnati and Dayton area. We preserve our heritage, support one another, and invest in the future of Eweland through CEANA.</p>
+      <div class="hero-ctas">
+        <a href="#involve" class="btn btn-primary">Become a Member</a>
+        <a href="#events" class="btn btn-secondary" style="border-color: var(--gold); color: var(--gold);">Upcoming Gatherings</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="welcome">
+    <div class="container welcome-grid">
+      <div class="welcome-text">
+        <p class="section-label">Woezɔ — Welcome</p>
+        <h2 class="section-title">Your Ewe Community in the Tri-State</h2>
+        <p>We are a registered nonprofit dedicated to cultural preservation, mutual support, and meaningful connection to our ancestral homeland. From Cincinnati to Dayton, we create spaces for celebration, belonging, and impact.</p>
+        <p>Whether you are new to the area or a longtime resident, you are welcome here.</p>
+        <a href="#about" class="btn btn-red">Our Story</a>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num">CEANA</div>
+          <div class="stat-label">Member Association</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">501(c)(3)</div>
+          <div class="stat-label">Tax-Exempt Nonprofit</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">Culture</div>
+          <div class="stat-label">At the Heart</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">Tri-State</div>
+          <div class="stat-label">Cincinnati & Dayton</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <p class="section-label">Who We Are</p>
+      <h2 class="section-title">About the Ewe Association of Cincinnati-Dayton</h2>
+      <p class="section-intro">We serve Ewes and friends across the Cincinnati–Dayton region, creating space for cultural celebration, mutual support, and contribution to development in Eweland.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">🏛️</div>
+          <h3>Our Mission</h3>
+          <p>To foster unity among Ewes in the Cincinnati-Dayton area, preserve and promote our rich cultural heritage, and partner with CEANA to support education, health, and community development in Eweland.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤝</div>
+          <h3>What We Do</h3>
+          <p>Host cultural and social gatherings, support members, engage youth and families, and channel collective energy toward CEANA’s development projects in Ghana, Togo, and Benin.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌍</div>
+          <h3>Part of CEANA</h3>
+          <p>As a proud member association of the Council of Ewe Associations of North America, we connect local community life with a network of over 20 associations across North America.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="culture" style="background: var(--white);">
+    <div class="container">
+      <p class="section-label">Heritage</p>
+      <h2 class="section-title">Culture & Community Life</h2>
+      <p class="section-intro">We keep Ewe traditions vibrant while building lasting friendships across the Cincinnati and Dayton communities.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">🥁</div>
+          <h3>Cultural Gatherings</h3>
+          <p>Events featuring music, dance, traditional attire, food, and the living culture of the Ewe people.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">👨‍👩‍👧‍👦</div>
+          <h3>Youth & Families</h3>
+          <p>Activities that help children and young people stay connected to language, values, and heritage.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤗</div>
+          <h3>Mutual Support</h3>
+          <p>A network of care — celebrating milestones together and standing with one another through life’s challenges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="events">
+    <div class="container">
+      <p class="section-label">Coming Together</p>
+      <h2 class="section-title">Events & Gatherings</h2>
+      <p class="section-intro">Join us for community events that celebrate culture and strengthen bonds.</p>
+      <div class="event-highlight">
+        <div>
+          <div class="event-meta">Date TBD • Greater Cincinnati / Dayton Area</div>
+          <h3>Next Community Gathering</h3>
+          <p>Details will be announced soon. Join our contact list or reach out to local leadership to stay informed about upcoming events and meetings.</p>
+        </div>
+        <div>
+          <a href="#contact" class="btn btn-primary">Get Updates</a>
+        </div>
+      </div>
+      <p style="margin-top: 1.5rem; color: var(--muted);">We also take part in the annual CEANA Convention, bringing together Ewe associations from across North America. <a href="https://ceana-online.org/" target="_blank" rel="noopener">Visit the national CEANA site →</a></p>
+    </div>
+  </section>
+
+  <section id="involve" style="background: var(--soft-gold);">
+    <div class="container">
+      <p class="section-label">Be Part of It</p>
+      <h2 class="section-title">Get Involved</h2>
+      <p class="section-intro">Membership, volunteering, and giving all help strengthen our local community and support work in Eweland.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">✨</div>
+          <h3>Become a Member</h3>
+          <p>Join Ewes and friends across Cincinnati and Dayton. Enjoy community events, cultural connection, and links to the wider CEANA family.</p>
+          <a href="#contact" class="btn btn-primary" style="margin-top: 1.25rem;">Express Interest</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤲</div>
+          <h3>Volunteer</h3>
+          <p>Help plan gatherings, support programs, or assist with outreach. Your time and skills are deeply valued.</p>
+          <a href="#contact" class="btn btn-secondary" style="margin-top: 1.25rem;">Reach Out</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">❤️</div>
+          <h3>Give & Support</h3>
+          <p>As a 501(c)(3), donations support local activities and contribute to CEANA projects — scholarships, schools, clinics, and more across Eweland.</p>
+          <a href="#contact" class="btn btn-red" style="margin-top: 1.25rem;">Donate / Inquire</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to Connect?</h2>
+      <p>Looking for community, cultural celebration, or a way to give back? We would be glad to welcome you.</p>
+      <a href="#contact" class="btn btn-primary">Contact Us</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">Reach Out</p>
+      <h2 class="section-title">Contact Ewe Association of Cincinnati-Dayton</h2>
+      <p class="section-intro">Questions about membership, events, or how to support our work? We look forward to hearing from you.</p>
+      <div class="cards" style="grid-template-columns: 1fr 1.2fr;">
+        <div class="card">
+          <h3>Connect With Leadership</h3>
+          <p style="margin: 1rem 0;">Local contacts listed on the national CEANA site include:</p>
+          <p><strong>Phone</strong><br>
+          513-237-1236 / 513-420-6233</p>
+          <p style="margin-top: 1rem;"><strong>Leadership (as listed nationally)</strong><br>
+          Mr. James Alornyo & Mr. Mac Backson</p>
+          <p style="margin-top: 1rem;"><strong>CEANA Affiliation</strong><br>
+          Proud member of the Council of Ewe Associations of North America</p>
+          <div class="ceana-badge">🔗 CEANA Member • 501(c)(3)</div>
+        </div>
+        <div class="card">
+          <h3>Send a Message</h3>
+          <form action="#" method="POST" style="display: grid; gap: 1rem; margin-top: 1rem;">
+            <div>
+              <label for="name" style="display:block; font-weight:500; margin-bottom:0.3rem;">Name</label>
+              <input type="text" id="name" name="name" required style="width:100%; padding:0.7rem; border:1px solid #ddd; border-radius:8px; font-size:1rem;">
+            </div>
+            <div>
+              <label for="email" style="display:block; font-weight:500; margin-bottom:0.3rem;">Email</label>
+              <input type="email" id="email" name="email" required style="width:100%; padding:0.7rem; border:1px solid #ddd; border-radius:8px; font-size:1rem;">
+            </div>
+            <div>
+              <label for="message" style="display:block; font-weight:500; margin-bottom:0.3rem;">Message</label>
+              <textarea id="message" name="message" rows="4" required style="width:100%; padding:0.7rem; border:1px solid #ddd; border-radius:8px; font-size:1rem; resize:vertical;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p style="font-size:0.85rem; color:var(--muted);">Demo form — connect to Formspree, Netlify Forms, Google Forms, or your preferred service.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Ewe Assoc. <span>Cincinnati-Dayton</span></div>
+          <p>Uniting Ewes and friends across Cincinnati and Dayton to preserve culture and support Eweland.</p>
+          <div class="ceana-badge">Proud Member of CEANA</div>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#culture">Culture</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#involve">Get Involved</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://ceana-online.org/" target="_blank" rel="noopener">CEANA National</a></li>
+            <li><a href="#">Facebook (add link)</a></li>
+            <li><a href="#">WhatsApp Group (add link)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#involve">Membership</a></li>
+            <li><a href="#involve">Donate</a></li>
+            <li><a href="#contact">Volunteer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Ewe Association of Cincinnati-Dayton. All rights reserved.</span>
+        <span>A member association of the Council of Ewe Associations of North America (CEANA)</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

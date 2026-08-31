@@ -1,0 +1,72 @@
+==============================================
+  CEANA OHIO CHAPTER WEBSITES
+  Columbus Ewe Habobor
+  Ewe Association of Cincinnati-Dayton
+==============================================
+
+HOW TO OPEN ON A MAC (or any computer)
+
+1. Unzip this folder if it is still zipped.
+
+2. Open the folder for the chapter you want:
+   - Columbus-Ewe-Habobor
+   - Cincinnati-Dayton
+
+3. Double-click the file named:
+      index.html
+
+4. The website will open in your browser (Safari, Chrome, etc.).
+
+
+----------------------------------------------
+WHAT IS INCLUDED
+----------------------------------------------
+
+Columbus-Ewe-Habobor/
+  └── index.html          ← Complete website for Columbus
+
+Cincinnati-Dayton/
+  └── index.html          ← Complete website for Cincinnati-Dayton
+
+Documentation/
+  ├── DESIGN-SYSTEM.md    ← Colors, fonts, style guide
+  ├── CONTENT-OUTLINES.md ← Full content & sample copy
+  └── NEXT-STEPS.md       ← How to launch the sites for real
+
+
+----------------------------------------------
+FEATURES OF EACH WEBSITE
+----------------------------------------------
+
+• Modern, mobile-friendly design
+• Hero welcome section
+• About / Mission
+• Culture & Heritage
+• Events section
+• Get Involved (Membership, Volunteer, Donate)
+• Contact form
+• Clear “Proud Member of CEANA” branding
+• Links to the national CEANA website
+
+
+----------------------------------------------
+NEXT STEPS TO MAKE THEM LIVE
+----------------------------------------------
+
+1. Replace placeholder contact emails and phone numbers
+2. Add real photos of members and events
+3. Connect the contact forms (Formspree is free and easy)
+4. Register a domain (examples: columbusewes.org, cincyewes.org)
+5. Host for free on Netlify, Vercel, or GitHub Pages
+
+See Documentation/NEXT-STEPS.md for full guidance.
+
+
+----------------------------------------------
+NEED CHANGES?
+----------------------------------------------
+
+Just tell me what you want updated (text, colors, extra pages, photos, forms, etc.) and I can revise the files.
+
+Akpe na mi!
+==============================================

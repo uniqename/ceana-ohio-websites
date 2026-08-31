@@ -129,12 +129,15 @@
             background: white;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
-        .event-date { font-size: 2rem; font-weight: 700; color: var(--red); }
-        .event-month { font-size: 0.85rem; color: var(--muted); text-transform: uppercase; }
-        .event-card h3 { margin-top: 1rem; font-size: 1.1rem; color: var(--navy); }
-        .event-card p { font-size: 0.95rem; color: var(--muted); }
+        .event-date-wrapper { display: flex; align-items: flex-start; gap: 1.5rem; margin-bottom: 1rem; }
+        .event-date { font-size: 2.8rem; font-weight: 700; color: var(--red); line-height: 1; min-width: 60px; }
+        .event-month { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 1px; }
+        .event-details { flex: 1; }
+        .event-card h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 0.5rem; font-weight: 600; }
+        .event-card .location { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.8rem; }
+        .event-card p { font-size: 0.95rem; color: var(--muted); line-height: 1.5; }
 
         /* Gallery */
         .gallery-label { font-size: 0.9rem; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; font-weight: 600; margin-bottom: 1rem; display: block; }
@@ -282,31 +285,43 @@
         </div>
         <div class="events-grid">
             <div class="event-card">
-                <div>
-                    <div class="event-date">30</div>
-                    <div class="event-month">AUG</div>
+                <div class="event-date-wrapper">
+                    <div style="text-align: center;">
+                        <div class="event-date">30</div>
+                        <div class="event-month">AUG</div>
+                    </div>
+                    <div class="event-details">
+                        <h3>Community Networking Mixer</h3>
+                        <p class="location">Columbus, OH • 6:00 PM - 9:00 PM</p>
+                        <p>Connect, share, and celebrate our growing community.</p>
+                    </div>
                 </div>
-                <h3>Community Networking Mixer</h3>
-                <p>Columbus, OH • 6:00 PM - 9:00 PM</p>
-                <p style="margin-top: 0.5rem; color: var(--gold);">Connect, share, and celebrate our growing community.</p>
             </div>
             <div class="event-card">
-                <div>
-                    <div class="event-date">20</div>
-                    <div class="event-month">SEP</div>
+                <div class="event-date-wrapper">
+                    <div style="text-align: center;">
+                        <div class="event-date">20</div>
+                        <div class="event-month">SEP</div>
+                    </div>
+                    <div class="event-details">
+                        <h3>Cultural Heritage Festival</h3>
+                        <p class="location">Columbus, OH • 10:00 AM - 5:00 PM</p>
+                        <p>Food, music, dance, and celebration of our roots.</p>
+                    </div>
                 </div>
-                <h3>Cultural Heritage Festival</h3>
-                <p>Columbus, OH • 10:00 AM - 5:00 PM</p>
-                <p style="margin-top: 0.5rem; color: var(--gold);">Food, music, dance, and celebration of our roots.</p>
             </div>
             <div class="event-card">
-                <div>
-                    <div class="event-date">12</div>
-                    <div class="event-month">OCT</div>
+                <div class="event-date-wrapper">
+                    <div style="text-align: center;">
+                        <div class="event-date">12</div>
+                        <div class="event-month">OCT</div>
+                    </div>
+                    <div class="event-details">
+                        <h3>Youth Mentorship Program</h3>
+                        <p class="location">Columbus, OH • 2:00 PM - 5:00 PM</p>
+                        <p>Empowering the next generation.</p>
+                    </div>
                 </div>
-                <h3>Youth Mentorship Program</h3>
-                <p>Columbus, OH • 2:00 PM - 5:00 PM</p>
-                <p style="margin-top: 0.5rem; color: var(--gold);">Empowering the next generation.</p>
             </div>
         </div>
     </section>

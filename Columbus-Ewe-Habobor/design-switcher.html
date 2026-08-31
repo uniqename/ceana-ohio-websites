@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Columbus Ewe Harbor - Design Showcase</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: #1A2332;
+            color: #1A2332;
+        }
+        .design-switcher {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 20px rgba(26,35,50,0.2);
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .design-switcher button {
+            background: #D4A017;
+            color: #1A2332;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .design-switcher button:hover {
+            background: #c49015;
+            transform: scale(1.05);
+        }
+        .design-label {
+            font-size: 0.85rem;
+            color: #1A2332;
+            font-weight: 600;
+        }
+        .design-counter {
+            font-size: 0.75rem;
+            color: #4A5568;
+            margin-left: 5px;
+        }
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="designFrame" src="index.html"></iframe>
+
+    <div class="design-switcher">
+        <span class="design-label">
+            Design: <span id="designNumber">1</span><span class="design-counter">/6</span>
+        </span>
+        <button onclick="previousDesign()">← Previous</button>
+        <button onclick="nextDesign()">Next →</button>
+    </div>
+
+    <script>
+        const designs = [
+            'index.html',           // Design 1: Current
+            'design-2.html',        // Design 2: Alternative
+            'design-3.html',        // Design 3: Mobile-first
+            'design-4.html',        // Design 4: Vibrant
+            'design-5.html',        // Design 5: Minimal
+            'design-6.html'         // Design 6: Gallery-focused
+        ];
+
+        let currentDesignIndex = 0;
+
+        function loadDesign(index) {
+            const frame = document.getElementById('designFrame');
+            const counter = document.getElementById('designNumber');
+            frame.src = designs[index];
+            counter.textContent = index + 1;
+            currentDesignIndex = index;
+            localStorage.setItem('selectedDesign', index);
+        }
+
+        function nextDesign() {
+            currentDesignIndex = (currentDesignIndex + 1) % designs.length;
+            loadDesign(currentDesignIndex);
+        }
+
+        function previousDesign() {
+            currentDesignIndex = (currentDesignIndex - 1 + designs.length) % designs.length;
+            loadDesign(currentDesignIndex);
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextDesign();
+            if (e.key === 'ArrowLeft') previousDesign();
+        });
+
+        // Load saved design on page load
+        const saved = localStorage.getItem('selectedDesign');
+        if (saved) {
+            loadDesign(parseInt(saved));
+        }
+    </script>
+</body>
+</html>

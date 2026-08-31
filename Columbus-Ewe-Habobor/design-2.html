@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Columbus Ewe Habobor | Preserving Ewe Heritage in Central Ohio</title>
+  <meta name="description" content="Columbus Ewe Habobor – A vibrant community preserving Ewe culture, building bonds in Central Ohio, and supporting development in Eweland since 2002. Proud member of CEANA.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #8B1A1A;
+      --gold: #D4A017;
+      --green: #1B5E20;
+      --navy: #1A2332;
+      --cream: #FDF8F0;
+      --soft-gold: #F5E6C8;
+      --teal: #0D7377;
+      --text: #1A2332;
+      --muted: #4A5568;
+      --white: #FFFFFF;
+      --shadow: 0 4px 20px rgba(26,35,50,0.08);
+      --radius: 14px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+    a { color: var(--teal); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--red); }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Header */
+    header {
+      background: var(--white);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 0;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--red);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      color: var(--navy);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .nav-links a:hover { color: var(--red); }
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.25s;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .btn-primary:hover {
+      background: #c49115;
+      color: var(--navy);
+    }
+    .btn-secondary {
+      background: transparent;
+      border-color: var(--gold);
+      color: var(--navy);
+    }
+    .btn-secondary:hover {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .btn-red {
+      background: var(--red);
+      color: var(--white);
+    }
+    .btn-red:hover { background: #6e1414; color: var(--white); }
+
+    /* Mobile nav */
+    .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--navy); }
+    @media (max-width: 800px) {
+      .menu-toggle { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1rem;
+        box-shadow: var(--shadow);
+      }
+      .nav-links.open { display: flex; }
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #2a3a4f 50%, var(--red) 100%);
+      color: var(--white);
+      padding: 8rem 0 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4A017' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+    .hero .container { position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(212,160,23,0.2);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 0.35rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.03em;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      margin-bottom: 1.25rem;
+      max-width: 700px;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      max-width: 580px;
+      opacity: 0.92;
+      margin-bottom: 2rem;
+    }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+    /* Sections */
+    section { padding: 4.5rem 0; }
+    .section-label {
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      margin-bottom: 1rem;
+      color: var(--navy);
+    }
+    .section-intro {
+      color: var(--muted);
+      max-width: 620px;
+      margin-bottom: 2.5rem;
+      font-size: 1.05rem;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.75rem;
+    }
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(26,35,50,0.12);
+    }
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--soft-gold);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.6rem;
+      color: var(--navy);
+    }
+    .card p { color: var(--muted); font-size: 0.98rem; }
+
+    /* Welcome strip */
+    .welcome {
+      background: var(--soft-gold);
+    }
+    .welcome-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .welcome-grid { grid-template-columns: 1fr; }
+    }
+    .welcome-text h2 { margin-bottom: 1rem; }
+    .welcome-text p { margin-bottom: 1rem; color: var(--muted); }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+    .stat {
+      background: var(--white);
+      padding: 1.4rem;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--red);
+    }
+    .stat-label { font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem; }
+
+    /* Event highlight */
+    .event-highlight {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
+    }
+    @media (max-width: 700px) {
+      .event-highlight { grid-template-columns: 1fr; }
+    }
+    .event-highlight h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .event-meta { color: var(--gold); font-weight: 600; margin-bottom: 0.75rem; }
+    .event-highlight p { opacity: 0.9; margin-bottom: 0; }
+
+    /* CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--red), #6e1414);
+      color: var(--white);
+      text-align: center;
+      padding: 4rem 0;
+    }
+    .cta-banner h2 { color: var(--white); margin-bottom: 0.75rem; }
+    .cta-banner p { opacity: 0.9; max-width: 520px; margin: 0 auto 1.75rem; }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      color: #c5cdd8;
+      padding: 4rem 0 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 800px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 500px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+    .footer-brand span { color: var(--gold); }
+    footer h4 {
+      color: var(--white);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+    }
+    footer ul { list-style: none; }
+    footer ul li { margin-bottom: 0.5rem; }
+    footer a { color: #c5cdd8; }
+    footer a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+    .ceana-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(212,160,23,0.15);
+      border: 1px solid rgba(212,160,23,0.4);
+      padding: 0.4rem 0.9rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      color: var(--gold);
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo"><img src="logo.png" alt="Columbus Ewe Harbor" style="height: 50px; width: auto;"></a>
+      <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#culture">Culture</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#involve">Get Involved</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#involve" class="btn btn-primary">Join Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">Proud Member of CEANA • Est. 2002</div>
+      <h1>Preserving Ewe Heritage.<br>Building Community in Columbus.</h1>
+      <p>Since 2002, Columbus Ewe Habobor has brought together Ewes and friends from Ghana, Togo, Benin and beyond to celebrate culture, support one another, and contribute to the development of Eweland.</p>
+      <div class="hero-ctas">
+        <a href="#involve" class="btn btn-primary">Join Our Community</a>
+        <a href="#events" class="btn btn-secondary" style="border-color: var(--gold); color: var(--gold);">Upcoming Events</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="welcome">
+    <div class="container welcome-grid">
+      <div class="welcome-text">
+        <p class="section-label">Woezɔ — Welcome</p>
+        <h2 class="section-title">A Home for Ewes in Central Ohio</h2>
+        <p>We are a vibrant, culturally inspired association dedicated to maintaining and advancing Ewe heritage within the multicultural fabric of Ohio. Through social gatherings, educational activities, and partnership with CEANA, we strengthen bonds and give back to our homeland.</p>
+        <p>Whether you are new to Columbus or have been here for years, you are welcome here.</p>
+        <a href="#about" class="btn btn-red">Learn Our Story</a>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num">2002</div>
+          <div class="stat-label">Year Founded</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">CEANA</div>
+          <div class="stat-label">Member Association</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">Culture</div>
+          <div class="stat-label">At Our Core</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">Community</div>
+          <div class="stat-label">Always First</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <p class="section-label">Who We Are</p>
+      <h2 class="section-title">About Columbus Ewe Habobor</h2>
+      <p class="section-intro">Formed on August 25, 2002 by friends from the Volta Region of Ghana, Togo, and Benin, we exist to preserve culture, build community, and support development in Eweland.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">🏛️</div>
+          <h3>Our Mission</h3>
+          <p>To preserve and promote Ewe cultural heritage, strengthen community bonds among Ewes in Central Ohio, and contribute to the social, educational, and economic advancement of Eweland.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤝</div>
+          <h3>What We Do</h3>
+          <p>Organize social and educational activities, foster friendly relations in the greater Columbus area, and partner with CEANA on impactful projects in Ghana, Togo, and Benin.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌍</div>
+          <h3>Part of Something Bigger</h3>
+          <p>As a proud member of the Council of Ewe Associations of North America (CEANA), we connect local action with continental impact across more than 20 associations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="culture" style="background: var(--white);">
+    <div class="container">
+      <p class="section-label">Heritage</p>
+      <h2 class="section-title">Culture & Community</h2>
+      <p class="section-intro">From traditional celebrations to everyday connection, we keep Ewe culture alive for the next generation in Central Ohio.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">🥁</div>
+          <h3>Cultural Celebrations</h3>
+          <p>Gatherings that feature music, dance, food, and the rich traditions of the Ewe people from Ghana, Togo, and Benin.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">👨‍👩‍👧‍👦</div>
+          <h3>Youth & Families</h3>
+          <p>Programs and activities that help younger generations stay connected to language, values, and heritage.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📚</div>
+          <h3>Education & Sharing</h3>
+          <p>Opportunities to learn, teach, and share knowledge about Ewe history, language, and contemporary life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="events">
+    <div class="container">
+      <p class="section-label">Coming Together</p>
+      <h2 class="section-title">Events</h2>
+      <p class="section-intro">Join us for gatherings that strengthen bonds and celebrate who we are.</p>
+      <div class="event-highlight">
+        <div>
+          <div class="event-meta">Date TBD • Location TBD</div>
+          <h3>Next Community Gathering</h3>
+          <p>Details coming soon. Follow us or join our mailing list to be the first to know about upcoming events, cultural nights, and meetings.</p>
+        </div>
+        <div>
+          <a href="#contact" class="btn btn-primary">Get Notified</a>
+        </div>
+      </div>
+      <p style="margin-top: 1.5rem; color: var(--muted);">We also participate in the annual CEANA Convention — a major gathering of Ewe associations across North America. <a href="https://ceana-online.org/" target="_blank" rel="noopener">Learn more about CEANA →</a></p>
+    </div>
+  </section>
+
+  <section id="involve" style="background: var(--soft-gold);">
+    <div class="container">
+      <p class="section-label">Be Part of It</p>
+      <h2 class="section-title">Get Involved</h2>
+      <p class="section-intro">Whether you want to join as a member, volunteer, or support our work, there is a place for you.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">✨</div>
+          <h3>Become a Member</h3>
+          <p>Join a warm community of Ewes and friends in Columbus. Membership connects you to events, support, and the wider CEANA network.</p>
+          <a href="#contact" class="btn btn-primary" style="margin-top: 1.25rem;">Express Interest</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤲</div>
+          <h3>Volunteer</h3>
+          <p>Help organize events, support cultural programs, or assist with outreach. Your time and talents make a real difference.</p>
+          <a href="#contact" class="btn btn-secondary" style="margin-top: 1.25rem;">Contact Us</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">❤️</div>
+          <h3>Support Our Work</h3>
+          <p>Donations help fund local gatherings and contribute to CEANA projects — scholarships, schools, health facilities, and more in Eweland.</p>
+          <a href="#contact" class="btn btn-red" style="margin-top: 1.25rem;">Donate / Inquire</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to Connect?</h2>
+      <p>Whether you are looking for community, want to celebrate culture, or wish to give back to Eweland — we would love to hear from you.</p>
+      <a href="#contact" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">Reach Out</p>
+      <h2 class="section-title">Contact Columbus Ewe Habobor</h2>
+      <p class="section-intro">Have questions about membership, events, or how to get involved? Send us a message.</p>
+      <div class="cards" style="grid-template-columns: 1fr 1.2fr;">
+        <div class="card">
+          <h3>Connect With Us</h3>
+          <p style="margin: 1rem 0;">We welcome inquiries from Ewes and friends in the greater Columbus area and beyond.</p>
+          <p><strong>General Inquiries</strong><br>
+          <!-- Replace with real email -->
+          <a href="mailto:columbus@example.org">columbus@example.org</a></p>
+          <p style="margin-top: 1rem;"><strong>CEANA Affiliation</strong><br>
+          Proud member of the Council of Ewe Associations of North America</p>
+          <div class="ceana-badge">🔗 CEANA Member Association</div>
+        </div>
+        <div class="card">
+          <h3>Send a Message</h3>
+          <form action="#" method="POST" style="display: grid; gap: 1rem; margin-top: 1rem;">
+            <div>
+              <label for="name" style="display:block; font-weight:500; margin-bottom:0.3rem;">Name</label>
+              <input type="text" id="name" name="name" required style="width:100%; padding:0.7rem; border:1px solid #ddd; border-radius:8px; font-size:1rem;">
+            </div>
+            <div>
+              <label for="email" style="display:block; font-weight:500; margin-bottom:0.3rem;">Email</label>
+              <input type="email" id="email" name="email" required style="width:100%; padding:0.7rem; border:1px solid #ddd; border-radius:8px; font-size:1rem;">
+            </div>
+            <div>
+              <label for="message" style="display:block; font-weight:500; margin-bottom:0.3rem;">Message</label>
+              <textarea id="message" name="message" rows="4" required style="width:100%; padding:0.7rem; border:1px solid #ddd; border-radius:8px; font-size:1rem; resize:vertical;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p style="font-size:0.85rem; color:var(--muted);">This is a demo form. Connect it to Formspree, Netlify Forms, or your email service.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Columbus Ewe <span>Habobor</span></div>
+          <p>Preserving Ewe heritage and building community in Central Ohio since 2002.</p>
+          <div class="ceana-badge">Proud Member of CEANA</div>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#culture">Culture</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#involve">Get Involved</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://ceana-online.org/" target="_blank" rel="noopener">CEANA National</a></li>
+            <li><a href="#">Facebook (add link)</a></li>
+            <li><a href="#">WhatsApp / Group (add link)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#involve">Membership</a></li>
+            <li><a href="#involve">Donate</a></li>
+            <li><a href="#contact">Volunteer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Columbus Ewe Habobor. All rights reserved.</span>
+        <span>A member association of the Council of Ewe Associations of North America (CEANA)</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

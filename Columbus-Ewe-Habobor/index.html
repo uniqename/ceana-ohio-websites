@@ -99,27 +99,13 @@
         .benefit-card {
             text-align: center;
         }
-        .benefit-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .benefit-icon-img {
+            width: 90px;
+            height: 90px;
             margin: 0 auto 1rem;
-            font-size: 2.5rem;
-            font-weight: 700;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+            display: block;
+            object-fit: contain;
         }
-        .benefit-icon svg {
-            width: 45px;
-            height: 45px;
-        }
-        .benefit-card:nth-child(1) .benefit-icon { background: var(--red); }
-        .benefit-card:nth-child(2) .benefit-icon { background: var(--gold); }
-        .benefit-card:nth-child(3) .benefit-icon { background: var(--green); }
-        .benefit-card:nth-child(4) .benefit-icon { background: #E63946; }
-        .benefit-card:nth-child(5) .benefit-icon { background: #1B5E20; }
         .benefit-card h3 { font-size: 0.95rem; margin-bottom: 0.6rem; color: white; font-weight: 700; line-height: 1.3; }
         .benefit-card p { font-size: 0.85rem; color: rgba(255,255,255,0.75); line-height: 1.4; }
 
@@ -263,41 +249,27 @@
 
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <svg class="benefit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white">
-                        <circle cx="9" cy="8" r="2.5"/>
-                        <circle cx="15" cy="8" r="2.5"/>
-                        <path d="M9 11c-1.66 0-5 0.83-5 2.5V16h12v-2.5c0-1.67-3.34-2.5-5-2.5zm6 0c1.66 0 5 0.83 5 2.5V16h4v-2.5c0-1.67-3.34-2.5-5-2.5z" fill="white"/>
-                    </svg>
+                    <img class="benefit-icon-img" src="assets/networking.png" alt="Networking">
                     <h3>Networking & Social Events</h3>
                     <p>Build lasting relationships and meaningful connections.</p>
                 </div>
                 <div class="benefit-card">
-                    <svg class="benefit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white">
-                        <path d="M19 2H5c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-5 16H7v-2h7v2zm5-4H5V4h14v10z"/>
-                        <rect x="7" y="6" width="7" height="2" fill="white"/>
-                        <rect x="7" y="10" width="7" height="1.5" fill="white"/>
-                    </svg>
+                    <img class="benefit-icon-img" src="assets/cultural-preservation.png" alt="Cultural Preservation">
                     <h3>Educational Resources</h3>
                     <p>Workshops, scholarships, and mentorship programs.</p>
                 </div>
                 <div class="benefit-card">
-                    <svg class="benefit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white">
-                        <path d="M12 2L5 7v8c0 4.42 3.58 8.53 8 9.94c4.42-1.41 8-5.52 8-9.94V7l-7-5zm-2 15h4v-5h-4v5zm6-7h-5V9h5v1z"/>
-                    </svg>
+                    <img class="benefit-icon-img" src="assets/education.png" alt="Education">
                     <h3>Business & Career Support</h3>
                     <p>Access to job opportunities and professional growth.</p>
                 </div>
                 <div class="benefit-card">
-                    <svg class="benefit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white">
-                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="white"/>
-                    </svg>
+                    <img class="benefit-icon-img" src="assets/business.png" alt="Business">
                     <h3>Health & Wellness</h3>
                     <p>Wellness programs, mental health support, and family services.</p>
                 </div>
                 <div class="benefit-card">
-                    <svg class="benefit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
-                    </svg>
+                    <img class="benefit-icon-img" src="assets/community.png" alt="Community">
                     <h3>Cultural Acts</h3>
                     <p>Preserve, celebrate, and share our traditions and heritage.</p>
                 </div>

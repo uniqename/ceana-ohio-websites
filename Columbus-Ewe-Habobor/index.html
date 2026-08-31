@@ -94,28 +94,29 @@
         #benefits h2 { color: white; }
         .benefits-label { font-size: 0.9rem; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; font-weight: 600; margin-bottom: 1rem; display: block; }
         .benefits-subtitle { font-size: 1.1rem; color: rgba(255,255,255,0.9); margin-bottom: 3rem; max-width: 800px; }
-        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2rem; margin-top: 4rem; }
         .benefit-card {
             text-align: center;
         }
         .benefit-icon {
-            width: 70px;
-            height: 70px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 1.8rem;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
             font-weight: 700;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
         .benefit-card:nth-child(1) .benefit-icon { background: var(--red); }
         .benefit-card:nth-child(2) .benefit-icon { background: var(--gold); }
         .benefit-card:nth-child(3) .benefit-icon { background: var(--green); }
         .benefit-card:nth-child(4) .benefit-icon { background: #4A90E2; }
         .benefit-card:nth-child(5) .benefit-icon { background: var(--red); }
-        .benefit-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: white; font-weight: 600; }
-        .benefit-card p { font-size: 0.95rem; color: rgba(255,255,255,0.85); }
+        .benefit-card h3 { font-size: 1rem; margin-bottom: 0.8rem; color: white; font-weight: 600; }
+        .benefit-card p { font-size: 0.9rem; color: rgba(255,255,255,0.8); line-height: 1.5; }
 
         /* Events */
         #events { background: #F5E6C8; }
@@ -179,6 +180,7 @@
             nav { display: none; }
             section h2 { font-size: 2rem; }
             .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+            .benefit-icon { width: 80px; height: 80px; font-size: 2rem; }
             .gallery { grid-template-columns: repeat(2, 1fr); }
             .gallery img { height: 180px; }
             footer { grid-template-columns: 1fr; }
